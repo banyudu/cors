@@ -5,6 +5,7 @@ service:
 plugins:
   - serverless-webpack
   - serverless-domain-manager
+  - serverless-offline
 
 provider:
   name: aws
@@ -19,7 +20,18 @@ functions:
       - http:
           method: get
           path: /
-          cors: true
+          cors:
+            origins:
+              - http://banyudu.com
+              - https://banyudu.com
+            headers:
+              - Content-Type
+              - X-Amz-Date
+              - Authorization
+              - X-Api-Key
+              - X-Amz-Security-Token
+              - X-Amz-User-Agent
+            allowCredentials: false
 
 custom:
   domains:

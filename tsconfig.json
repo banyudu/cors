@@ -2,7 +2,7 @@
   "compilerOptions": {
     "sourceMap": true,
     "target": "es6",
-    "lib": [ "esnext" ],
+    "lib": [ "esnext", "dom" ],
     "baseUrl": ".",
     "outDir": "build/dist",
     "module": "esnext",
