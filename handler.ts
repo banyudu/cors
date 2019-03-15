@@ -12,7 +12,9 @@ export const get = async (event: any, context: any, callback: any) => {
     const result = await axios.get(url, { headers: event.headers })
     callback(null, {
       statusCode: 200,
-      headers: result.headers,
+      headers: {
+        'content-type': result.headers['content-type'] || 'text/html; charset=utf-8'
+      },
       body: result.data
     })
   } catch (error) {
