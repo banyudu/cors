@@ -1,0 +1,2 @@
+# cors
+cors proxy host
