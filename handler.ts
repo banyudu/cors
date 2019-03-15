@@ -9,10 +9,11 @@ export const get = async (event: any, context: any, callback: any) => {
   }
   const url = parameters[0]
   try {
-    const result = await axios.get(url)
+    const result = await axios.get(url, { headers: event.headers })
     callback(null, {
       statusCode: 200,
-      body: JSON.stringify(result.data)
+      headers: result.headers,
+      body: result.data
     })
   } catch (error) {
     console.error(error)

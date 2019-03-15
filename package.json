@@ -4,6 +4,7 @@
   "description": "Category service",
   "main": "handler.js",
   "scripts": {
+    "start": "sls offline",
     "build": "sls webpack",
     "package": "sls package",
     "lint": "tslint -c tslint.json -p .",
