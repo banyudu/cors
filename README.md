@@ -1,2 +1,3 @@
 # cors
-cors proxy host
+
+Proxy get resources, inspired by [cors.io](https://cors.io)
