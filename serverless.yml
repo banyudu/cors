@@ -23,7 +23,7 @@ functions:
           path: /
           cors:
             origins:
-              - *.banyudu.com
+              - "*.banyudu.com"
             headers:
               - Content-Type
               - X-Amz-Date
