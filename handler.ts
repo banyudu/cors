@@ -13,7 +13,8 @@ export const get = async (event: any, context: any, callback: any) => {
     callback(null, {
       statusCode: 200,
       headers: {
-        'content-type': result.headers['content-type'] || 'text/html; charset=utf-8'
+        'content-type': result.headers['content-type'] || 'text/html; charset=utf-8',
+        'Access-Control-Allow-Origin': 'https://banyudu.com'
       },
       body: result.data
     })
