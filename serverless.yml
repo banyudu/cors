@@ -19,9 +19,9 @@ functions:
     handler: handler.get
     events:
       - http:
-        method: get
-        path: /
-        cors: true
+          method: get
+          path: /
+          cors: true
 
 custom:
   domains:
