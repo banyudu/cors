@@ -21,20 +21,7 @@ functions:
       - http:
           method: get
           path: /
-          cors:
-            origins:
-              - "https://banyudu.com"
-              - "http://banyudu.com"
-              - "http://local.banyudu.com"
-              - "https://local.banyudu.com"
-            headers:
-              - Content-Type
-              - X-Amz-Date
-              - Authorization
-              - X-Api-Key
-              - X-Amz-Security-Token
-              - X-Amz-User-Agent
-            allowCredentials: false
+          cors: true
 
 custom:
   domains:
